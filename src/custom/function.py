@@ -36,6 +36,8 @@ def condition_filter(data: dict) -> bool:
     """
     # if data["ratio"] in ("720p", "540p"):
     #     return False  # 过滤低分辨率的视频作品
+    if data["type"] in (_("图集"), _("实况")):
+        return False
     return True
 
 
